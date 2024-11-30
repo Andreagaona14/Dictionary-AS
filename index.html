@@ -3,45 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Traductor</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+
+    <div class="container">
         <h1>Traductor</h1>
-    </header>
+        <form class="translator-form">
+            <label for="word">Palabra/word</label>
+            <input type="text" id="word" placeholder="Escribe una palabra...">
 
-    <form class="translator-form">
-        <label for="word">Palabra / Word</label>
-        <input type="text" id="word" placeholder="Escribe una palabra">
+            <div class="language-options">
+                <label>
+                    <input type="radio" name="language" value="ingles"> Inglés
+                </label>
+                <label>
+                    <input type="radio" name="language" value="espanol" checked> Español
+                </label>
+            </div>
 
-        <div class="language-options">
-            <label> <input type="radio" name="language" id="ingles">Inglés</label>
-            <label> <input type="radio" name="language" id="espanish">Español</label>
-        </div>
+            <button type="button" class="translate-button">Traducir/Translate</button>
 
-        <button type="button" class="translate/button">Traducir / Translate</button>
+            <div class="response">
+                <p>response/respuesta</p>
+            </div>
 
-        <div class="response">
-            <p>Respuesta  /  Response</p>
-        </div>
+            <h2>Categorías</h2>
+            <div class="categories">
+                <label>
+                    <input type="radio" name="category" value="animales"> Animales
+                </label>
+                <label>
+                    <input type="radio" name="category" value="frutas"> Frutas
+                </label>
+                <label>
+                    <input type="radio" name="category" value="colores"> Colores
+                </label>
+                <label>
+                    <input type="radio" name="category" value="descripciones"> Descripciones
+                </label>
+                <label>
+                    <input type="radio" name="category" value="habilidades"> Habilidades
+                </label>
+                <label>
+                    <input type="radio" name="category" value="verbos" checked> Verbos
+                </label>
+            </div>
 
-        <h2>Categorías</h2>
-        <div class="categories">
-            <label> <input type="radio" name="category" id="animals">Animales</label>
-            <label> <input type="radio" name="category" id="fruts">Frutas</label>
-            <label> <input type="radio" name="category" id="colors">Colores</label>
-            <label> <input type="radio" name="category" id="descriptions">Descripciones</label>
-            <label> <input type="radio" name="category" id="skills">Habilidades</label>
-            <label> <input type="radio" name="category" id="verbs">Verbos</label>
-        </div>
+            <div class="word-list">
+                <p>Aquí irán la lista de palabras</p>
+            </div>
 
-        <div class="word-list">
-            <p>Aquí va tu lista de palabras</p>
-         </div>
-
-         <button type="button" class="new-word-button"></button>
-        
-    </form>
-    
+            <button type="button" class="new-word-button">Nueva palabra</button>
+        </form>
+    </div>
 </body>
 </html>
