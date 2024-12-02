@@ -10,7 +10,6 @@
 
     <div class="container">
         <h1>Traductor</h1>
-        <form class="translator-form">
             <label for="word">Palabra / Word</label>
             <input type="text" id="word" placeholder="Escribe una palabra...">
 
@@ -49,8 +48,13 @@
                 <p>Aquí va la lista de palabras</p>
             </div>
 
-            <button type="button" class="new-word-button">Nueva palabra</button>
-        </form>
+            <form id="AddWordForm">
+                <h2>Agregar nueva palabra</h2>
+                <label > Palabra en ingles:</label> <input type="text" name="word-english" id="word-english">
+                <label >Traduccion al español</label> <input type="text" name="word-spanish" id="word-spanish">
+                <label >Un ejemplo de uso de la palabra</label> <input type="text" name="example" id="example" placeholder="en ingles o español">
+                <button type="button" class="new-word-button">Nueva palabra</button>
+            </form>
     </div>
 </body>
 </html>
