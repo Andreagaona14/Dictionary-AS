@@ -52,3 +52,15 @@ function sortDictionary() {
       displayWords(words);  // Actualizar la vista de las palabras ordenadas
   }
 }
+
+// Función para filtrar palabras por categoría
+function filterByCategory() {
+  const selectedCategory = Array.from(categoryRadios).find(radio => radio.checked)?.id;
+  console.log("Categoría seleccionada:", selectedCategory);
+  
+  if (selectedCategory && dictionary.categories[selectedCategory]) {
+      const words = dictionary.categories[selectedCategory];
+      console.log("Palabras en esta categoría:", words);
+      displayWords(words);
+  }
+}
