@@ -101,3 +101,12 @@ function addNewWord() {
       alert("Por favor, complete todos los campos.");
   }
 }
+
+// Eventos
+translateButton.addEventListener('click', translateWord);
+sortButton.addEventListener('click', sortDictionary);
+categoryRadios.forEach(radio => radio.addEventListener('change', filterByCategory));
+addWordButton.addEventListener('click', addNewWord);
+
+// Cargar palabras iniciales (por categoría)
+displayWords(dictionary); // Cargar por defecto las palabras de animales al inicio
