@@ -79,3 +79,25 @@ function displayWords(words) {
       dictionaryTable.appendChild(row);
   }
 }
+
+// Función para agregar nueva palabra
+function addNewWord() {
+  const englishWord = document.getElementById('new-english-word').value.trim();
+  const spanishWord = document.getElementById('new-spanish-word').value.trim();
+  const example = document.getElementById('new-example').value.trim();
+  const category = document.getElementById('new-word-category').value;
+
+  if (englishWord && spanishWord && example) {
+      const newWord = {
+          id: Date.now(),  // Genera un ID único basado en el timestamp
+          english: englishWord,
+          spanish: spanishWord,
+          example: example
+      };
+      dictionary.categories[category].push(newWord);
+      displayWords(dictionary.categories[category]);  // Actualizar la vista de las palabras
+      newWordForm.reset();  // Limpiar el formulario
+  } else {
+      alert("Por favor, complete todos los campos.");
+  }
+}
