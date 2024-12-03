@@ -72,3 +72,98 @@ input[type="radio"] {
   font-size: 0.95rem;
   color: #555;
 }
+
+/* Botones */
+button {
+  background-color: #5eaeff;
+  color: #ffffff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 30px;
+}
+
+button:hover {
+  background-color: #005bb5;
+  transform: scale(1.05);
+}
+
+/* Respuesta y lista de palabras */
+.response, .word-list {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e6f7ff;
+  border: 1px solid #b3e5fc;
+  border-radius: 6px;
+  width: 20rem;
+  margin-left: 26rem;
+}
+
+.response p, .word-list p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Tabla del diccionario */
+.dictionary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.dictionary-table th, .dictionary-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.dictionary-table th {
+  background-color: #548dff;
+  color: white;
+  font-weight: bold;
+}
+
+.dictionary-table td {
+  background-color: #f9f9f9;
+}
+
+/* Formulario para añadir nuevas palabras */
+#new-word-form {
+  display: grid;
+  gap: 10px;
+  margin: 20px auto; /* Centra horizontalmente */
+  text-align: center; /* Asegura que el contenido interno esté centrado */
+  justify-content: center; /* Centra los recuadros horizontalmente */
+  align-items: center; /* Centra los recuadros verticalmente */
+}
+
+
+/* Seleccionar la categoría */
+#new-word-category {
+  width: 100%; /* Asegura que ocupe todo el ancho del formulario */
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Botón para añadir palabra */
+#add-word-button {
+  background-color: #5eaeff;
+  color: #ffffff;
+  border: none;
+  padding: 12px 30px; /* Reduce el tamaño del botón */
+  border-radius: 5px;
+  font-size: 1rem; /* Texto más pequeño */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#add-word-button:hover {
+  background-color: #005bb5;
+  transform: scale(1.05);
+}
