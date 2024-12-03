@@ -3,29 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Traductor</title>
+    <title>Traductor Interactivo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
-        <h1>Traductor</h1>
+        <h1>Traductor Interactivo</h1>
+
+        <!--Inicia el traductor-->
         <form class="translator-form">
             <label for="word">Palabra / Word</label>
             <input type="text" id="word" placeholder="Escribe una palabra...">
 
             <div class="language-options">
-                <label><input type="radio" name="language" id="english"> Inglés</label>
-                <label><input type="radio" name="language" id="espanol"> Español</label>
+                <label><input type="radio" name="language" id="english"> Inglés a Español</label>
+                <label><input type="radio" name="language" id="espanol"> Español a Inglés</label>
             </div>
 
             <button type="button" class="translate-button">Traducir / Translate</button>
+        </form>
+        <!--Finaliza el traductor-->
 
-            <div class="response">
-                <p>Response / Respuesta</p>
-            </div>
+        <div class="response">
+            <p id="translation-output">La traducción aparecerá aquí.</p>
+        </div>
 
-            <h2>Categorías</h2>
+            <!--Inicia Diccionario-->
+            <h2>Diccionario</h2>
+            <h4>Categorías</h4>
             <div class="categories">
                 <label><input type="radio" name="category" id="animals"> Animales</label>
                 <label>
@@ -41,16 +47,59 @@
                     <input type="radio" name="category" id="skills"> Habilidades
                 </label>
                 <label>
-                    <input type="radio" name="category" value="verbs"> Verbos
+                    <input type="radio" name="category" id="verbs"> Verbos
                 </label>
             </div>
 
-            <div class="word-list">
-                <p>Aquí va la lista de palabras</p>
-            </div>
+           <!--<div class="word-list">
+            <p>Selecciona una categoría</p>
+        </div>--> 
+           
+            <table class="dictionary-table">
+                <thead>
+                    <tr>
+                        <th>Inglés</th>
+                        <th>Español</th>
+                        <th>Ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody id="dictionary-entries">
+                    <!-- Las palabras del diccionario se generarán aquí dinámicamente -->
+                </tbody>
+            </table>
 
-            <button type="button" class="new-word-button">Nueva palabra</button>
-        </form>
+             
+            <div class="dictionary-controls">
+                <button type="button" class="sort-button">Ordenar Alfabéticamente</button>
+            </div>
+            <!--Finaliza el diccionario-->
+
+            <!--Inicia el formulario para agregar nuevas palabras-->
+            <h2>Añadir nueva palabra</h2>
+            <form id="new-word-form">
+                <input type="text" id="new-english-word" placeholder="Palabra en Inglés" required>
+                <input type="text" id="new-spanish-word" placeholder="Palabra en Español" required>
+                <input type="text" id="new-example" placeholder="Ejemplo de uso" required>
+
+                <div>
+                    <label for="new-word-category">Selecciona la categoría a la que pertenece </label>
+                    <select id="new-word-category" required>
+                        <option value="animals">Animales</option>
+                        <option value="fruits">Frutas</option>
+                        <option value="colors">Colores</option>
+                        <option value="physical_descriptions">Descripciones Físicas</option>
+                        <option value="skills">Habilidades</option>
+                        <option value="verbs">Verbos</option>
+                    </select>
+                </div>
+    
+                <button type="button" id="add-word-button">Añadir Palabra</button>
+            </form>
+            <!--Finaliza el formulario-->
+
+            <script src="dictionary.js" type="module"></script>
+            <script src="app.js" type="module"></script>
+        
     </div>
 </body>
 </html>
