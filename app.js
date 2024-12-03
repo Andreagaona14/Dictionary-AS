@@ -26,3 +26,18 @@ function translateWord() {
       translationOutput.textContent = translation ? `La traducción de la palabra es: ${translation}` : 'Palabra no encontrada';
   }
 }
+
+// Función para buscar la traducción
+function findTranslation(word, sourceLang, targetLang) {
+  // Usamos for...in para recorrer las categorías del diccionario
+  for (const category in dictionary.categories) {
+      const categoryWords = dictionary.categories[category];
+      // Usamos for...of para recorrer las palabras dentro de una categoría
+      for (const item of categoryWords) {
+          if (item[sourceLang].toLowerCase() === word.toLowerCase()) {
+              return item[targetLang];
+          }
+      }
+  }
+  return null;
+}
