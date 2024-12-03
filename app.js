@@ -64,3 +64,18 @@ function filterByCategory() {
       displayWords(words);
   }
 }
+
+// Función para mostrar las palabras en la tabla
+function displayWords(words) {
+  dictionaryTable.innerHTML = ''; // Limpiar tabla
+  // Usamos for...of para recorrer las palabras
+  for (const word of words) {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+          <td>${word.english}</td>
+          <td>${word.spanish}</td>
+          <td>${word.example}</td>
+      `;
+      dictionaryTable.appendChild(row);
+  }
+}
