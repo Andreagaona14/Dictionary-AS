@@ -10,7 +10,6 @@ const sortButton = document.querySelector('.sort-button');
 const newWordForm = document.getElementById('new-word-form');
 const addWordButton = document.getElementById('add-word-button');
 
-
 // Función de traducción
 function translateWord() {
   const word = wordInput.value.trim();
