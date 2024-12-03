@@ -41,3 +41,14 @@ function findTranslation(word, sourceLang, targetLang) {
   }
   return null;
 }
+
+// Función para ordenar las palabras alfabéticamente de la A a la Z
+function sortDictionary() {
+  const selectedCategory = Array.from(categoryRadios).find(radio => radio.checked)?.id;
+  if (selectedCategory) {
+      const words = dictionary.categories[selectedCategory];
+      // Ordenar las palabras de A a Z por la palabra en inglés
+      words.sort((a, b) => a.english.toLowerCase().localeCompare(b.english.toLowerCase()));
+      displayWords(words);  // Actualizar la vista de las palabras ordenadas
+  }
+}
