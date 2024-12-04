@@ -54,7 +54,8 @@
            <!--<div class="word-list">
             <p>Selecciona una categoría</p>
         </div>--> 
-           
+
+           <!--Tabla para mostrar las categorias-->
             <table class="dictionary-table">
                 <thead>
                     <tr>
@@ -64,7 +65,7 @@
                     </tr>
                 </thead>
                 <tbody id="dictionary-entries">
-                    <!-- Las palabras del diccionario se generarán aquí dinámicamente -->
+                    <!-- Las palabras del diccionario aparecen aquí-->
                 </tbody>
             </table>
 
@@ -81,6 +82,7 @@
                 <input type="text" id="new-spanish-word" placeholder="Palabra en Español" required>
                 <input type="text" id="new-example" placeholder="Ejemplo de uso" required>
 
+                <!--Menú despegable para selecionar la categoria a la que pertence la palabra que quiere agregar-->
                 <div>
                     <label for="new-word-category">Selecciona la categoría a la que pertenece </label>
                     <select id="new-word-category" required>
@@ -97,6 +99,8 @@
             </form>
             <!--Finaliza el formulario-->
 
+
+            <!--Módulos para enlazar con las funcionalidades del traductor y diccionario -->
             <script src="dictionary.js" type="module"></script>
             <script src="app.js" type="module"></script>
         

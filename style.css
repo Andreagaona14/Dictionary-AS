@@ -1,17 +1,17 @@
-/* Configuración del Body */
+/*Configuración del body*/
 body {
   font-family: 'Arial', sans-serif;
   background-color: #e6f7ff;
-  margin: 0;
-  padding: 10px;
+  margin: 0; /*Márgnes*/
+  padding: 10px; /*Espaciado o border interno*/
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /*Centra horizontalmente*/
+  align-items: center;  /*Centra verticalmente*/
   min-height: 100vh;
   line-height: 1.6;
 }
 
-/* Contenedor principal */
+/*Contenedor principal*/
 .container {
   width: 95%;
   max-width: 1200px;
@@ -22,7 +22,7 @@ body {
   text-align: center;
 }
 
-/* Títulos */
+/*Títulos*/
 h1, h2 {
   color: #003399;
   margin-bottom: 15px;
@@ -32,7 +32,7 @@ h2 {
   font-size: 1.5rem;
 }
 
-/* Etiquetas */
+/*Etiquetas*/
 label {
   display: block;
   margin-bottom: 8px;
@@ -40,7 +40,7 @@ label {
   color: #333;
 }
 
-/* Campos donde se ingresa las palabras */
+/*Campos donde se ingresa las palabras*/
 input[type="text"] {
   width: 15rem;
   padding: 10px;
@@ -53,15 +53,15 @@ input[type="text"] {
 input[type="text"]:focus {
   border-color: #5eaeff;
   box-shadow: 0 0 5px rgba(94, 174, 255, 0.5);
-  outline: none;
+  outline: none; /*Elimina el contorno predeterminado*/
 }
 
 input[type="radio"] {
-  accent-color: #ff5722; /* Cambia el color del radio button */
+  accent-color: #ff5722; /*Cambia el color del radio button*/
 }
 
 
-/* Seleccionar idiomas y categorías */
+/*Seleccionar idiomas y categorías*/
 .language-options, .categories {
   margin-bottom: 20px;
 }
@@ -73,7 +73,7 @@ input[type="radio"] {
   color: #555;
 }
 
-/* Botones */
+/*Botones*/
 button {
   background-color: #5eaeff;
   color: #ffffff;
@@ -88,10 +88,10 @@ button {
 
 button:hover {
   background-color: #005bb5;
-  transform: scale(1.05);
+  transform: scale(1.05); /*Ampliar el botón*/
 }
 
-/* Respuesta y lista de palabras */
+/*lista de palabras*/
 .response, .word-list {
   margin-top: 20px;
   padding: 15px;
@@ -108,10 +108,10 @@ button:hover {
   font-size: 1rem;
 }
 
-/* Tabla del diccionario */
+/*Tabla del diccionario*/
 .dictionary-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: collapse; /*Combinación de bordes adyacentes en uno solo*/
   margin-top: 20px;
 }
 
@@ -131,34 +131,34 @@ button:hover {
   background-color: #f9f9f9;
 }
 
-/* Formulario para añadir nuevas palabras */
+/*Formulario para añadir nuevas palabras*/
 #new-word-form {
   display: grid;
   gap: 10px;
-  margin: 20px auto; /* Centra horizontalmente */
-  text-align: center; /* Asegura que el contenido interno esté centrado */
-  justify-content: center; /* Centra los recuadros horizontalmente */
-  align-items: center; /* Centra los recuadros verticalmente */
+  margin: 20px auto; 
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 
-/* Seleccionar la categoría */
+/*Seleccionar la categoría*/
 #new-word-category {
-  width: 100%; /* Asegura que ocupe todo el ancho del formulario */
+  width: 100%; 
   padding: 10px;
   border-radius: 6px;
   border: 1px solid #ccc;
   font-size: 1rem;
 }
 
-/* Botón para añadir palabra */
+/*Botón para añadir palabra*/
 #add-word-button {
   background-color: #5eaeff;
   color: #ffffff;
   border: none;
-  padding: 12px 30px; /* Reduce el tamaño del botón */
+  padding: 12px 30px; 
   border-radius: 5px;
-  font-size: 1rem; /* Texto más pequeño */
+  font-size: 1rem; 
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
